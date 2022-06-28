@@ -181,7 +181,7 @@ class Shop():
             PlayerInstance.AddToInventory(Item)
             PlayerInstance.RemoveMoney(Item.GetValue())
         else:
-            ReturnLine()
+            self.ReturnLine()
     
     def RemoveItem(self, Item):
         self.__Shop.pop(self.__Shop.index(Item))
