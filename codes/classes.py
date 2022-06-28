@@ -86,6 +86,7 @@ class Entity():
     def UpdateEnergy(self, num):
         self.__CurrentEnergy = max(self.__CurrentEnergy + num, 0)
         
+        
 class Card():
     def __init__(self, Name, Type, Cost, VitalityDmg, SpiritDmg, Image, Description, Effect = None):
         self.__Cost = int(Cost)
@@ -136,6 +137,7 @@ class Card():
     def __str__(self):
         return "{}, {}, {}, {}, {}, {}, {}, {}, \n\n".format(self.__Name, self.__Type, self.__Cost, self.__VitalityDmg, self.__SpiritDmg, self.__Image, self.__Description, self.__Effect)
 
+
 class Boss(Entity):
     def __init__(self, Name, StatsTuple, Ai):
         super().__init__(Name, StatsTuple)
@@ -143,209 +145,6 @@ class Boss(Entity):
 
     def GetAi(self):
         return self.__Ai
-    
-    # def TakeVitalityDmg(self, Value):
-    #     self.__CurrentVitality -= Value * PlayerInstance.GetDmgMultiplier()
-    #     if self.__CurrentVitality <= 0:
-    #         self.__IsAlive = False
-
-    # def TakeSpiritDmg(self, Value):
-    #     self.__CurrentSpirit += Value
-    #     if self.__CurrentSpirit >= self.__MaxSpirit:
-    #         self.__IsAlive = False
-    
-    # def RestoreSpirit(self):
-    #     ToRestore = self.__MaxSpirit * (1 / 4)
-    #     if self.__CurrentSpirit - ToRestore <= 0:
-    #         self.ResetSpirit()
-    #     else:
-    #         self.__CurrentSpirit = self.__CurrentSpirit - ToRestore
-    
-    # def CalculateProbability(self):
-    #     SpiritDifference = (self.__MaxSpirit - self.__CurrentSpirit) / self.__MaxSpirit
-    #     Probability = 0.25 * (1 - SpiritDifference)
-    #     return Probability
-    
-    # def BossDie(self):
-    #     self.__IsAlive = False
-    
-    # def SetCanAttack(self, boolean):
-    #     self.__CanAttack = boolean
-
-    
-class Player(Entity):
-    def __init__(self, Name, Deck, StatsTuple):
-        super().__init__(Name, StatsTuple)
-        self.__Deck = Deck #list of card object
-        self.__Hand = [] #hand of card object
-        self.__Sin = 0
-
-    def GetDeck(self):
-        return self.__Deck
-
-    def GetSin(self):
-        return self.__Sin
-    
-    def UpdateSin(self, num):
-        #Minimum of 0 sin
-        self.__Sin = max(0, self.__Sin + num)
-
-        # self.__EnergyRegenPerRound = 2
-        # self.__MaxEnergy = int(Energy)
-        # self.__Defence = 0 #a flat number of dmg is ignored, e.g. self.__Defence = 3, then you would take 3 less dmg from attacks
-        # self.__DmgMultiplier = 1
-        # self.__PercentageStrDefence = 0
-     #a percentage of dmg is ignored e.g. 0.15 (value must be under 1)
-        # self.__Inventory = []
-        # self.__IsAlive = True
-        # self.__Money = 0
-    
-    # def GetPercentageDefence(self):
-    #     return self.__PercentageDefence
-    # def GetPercentageDefenceStr(self):        
-    #     return str(self.__PercentageDefence)
-    
-    # def GetDmgMultiplier(self):
-    #     return self.__DmgMultiplier    
-    # def GetDmgMultiplierStr(self):
-    #     return str(self.__DmgMultiplier)
-    
-    # def GetEnergyRegenPerRound(self):
-    #     return self.__EnergyRegenPerRound
-    # def GetEnergyRegenPerRoundStr(self):
-    #     return str(self.__EnergyRegenPerRound)
-
-    
-
-    
-    # def GetInventory(self):
-    #     return self.__Inventory
-    
-    # def GetMoney(self):
-    #     return self.__Money
-    # def GetMoneyStr(self):
-    #     return str(self.__Money)
-    
-    # def GetDefence(self):
-    #     return self.__Defence
-    # def GetDefenceStr(self):
-    #     return str(self.__Defence)
-    
-    # def SetDefence(self, Value):
-    #     self.__Defence = Value
-    
-    # def ResetDefence(self):
-    #     self.__Defence = 0
-
-    # def SetEnergyRegenPerRound(self, Value):
-    #     self.__EnergyRegenPerRound = Value
-    
-    # def SetDmgMultiplier(self, Value):
-    #     self.__DmgMultiplier = Value
-    
-    # def ResetDmgMultiplier(self):
-    #     self.__DmgMultiplier = 1
-    
-    # def SetPercentageDefence(self, Value):
-    #     self.__PercentageDefence = Value
-    
-    # def ResetPercentageDefence(self):
-    #     self.__PercentageDefence = 0
-    
-    # def RegenEnergy(self):
-    #     if self.__CurrentEnergy + self.__EnergyRegenPerRound <= self.__MaxEnergy:
-    #         self.__CurrentEnergy += self.__EnergyRegenPerRound
-    #     elif self.__CurrentEnergy + self.__EnergyRegenPerRound == self.__MaxEnergy + 1:
-    #         self.__CurrentEnergy += 1
-    
-    # def AddToInventory(self, Item):
-    #     self.__Inventory.append(Item)
-    
-    # def RemoveFromInventory(self, Item):
-    #     self.__Inventory.pop(self.__Inventory.index(Item))
-    
-    # def RemoveCardFromHand(self, ID):
-    #     self.__Hand.pop(self.__Hand.index(ID))
-    
-    # def AddMoney(self, Value):
-    #     self.__Money += Value
-    
-    # def RemoveMoney(self, Value):
-    #     self.__Money -= Value
-    
-
-    
-    # def SetEnergyMax(self, Value):
-    #     self.__MaxEnergy = Value
-    #     self.__CurrentEnergy = Value
-    
-    # def AddMaxVitality(self, Value):
-    #     self.__MaxVitality += Value
-    #     self.__CurrentVitality += Value
-
-    # def TakeVitalityDmg(self, Value):
-    #     if Value >= self.__Defence:
-    #         VitalityDmg = Value - self.__Defence
-
-    #     VitalityDmg -= (VitalityDmg * self.__PercentageDefence)
-    #     self.__CurrentVitality -= VitalityDmg
-
-    #     if self.__CurrentVitality <= 0:
-    #         self.__IsAlive = False
-    
-    # def TakeSpiritDmg(self, Value):
-    #     self.__CurrentSpirit += Value
-    #     if self.__CurrentSpirit >= self.__MaxSpirit:
-    #         self.__IsAlive = False
-    
-    # def RestoreSpirit(self):
-    #     ToRestore = self.__MaxSpirit * (1/4)
-    #     if self.__CurrentSpirit - ToRestore <= 0:
-    #         self.ResetSpirit()
-    #     else:
-    #         self.__CurrentSpirit -= ToRestore
-    
-    # def RestoreVitality(self, Value):
-    #     if self.__CurrentVitality + Value >= self.__MaxVitality:
-    #         self.ResetVitality()
-    #     else:
-    #         self.__CurrentVitality += Value
-
-    # def ResetSpirit(self):
-    #     self.__CurrentSpirit = 0
-    
-    # def ResetPlayerAlive(self):
-    #     self.__IsAlive = True
-    
-    # def ResetEnergy(self):
-    #     self.__CurrentEnergy = self.__MaxEnergy
-    
-    # def ResetEnergyRegenPerRound(self):
-    #     self.__EnergyRegenPerRound = 2
-        
-    # def ResetVitality(self):
-    #     self.__CurrentVitality = self.__MaxVitality
-    
-    # def ResetSin(self):
-    #     self.__Sin = 0
-    
-    # def UseEnergy(self, Value):
-    #     self.__CurrentEnergy -= Value
-    
-    # def GainEnergy(self, Value):
-    #     if self.__CurrentEnergy + Value >= self.__MaxEnergy:
-    #         self.ResetEnergy()
-    #     else:
-    #         self.__CurrentEnergy += Value
-    
-    # def AlterCurrentSpirit(self, Value):
-    #     self.__CurrentSpirit += Value
-    
-    # def AlterCurrentVitality(self, Value):
-    #     self.__CurrentVitality += Value
-    
-    # def AddToHand(self, ID):
-    #     self.__Hand.append(ID)
 
 
 class Item():
