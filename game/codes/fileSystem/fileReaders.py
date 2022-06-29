@@ -26,7 +26,7 @@ def readCSVFile(filename):
     for row in csvReader:
         data.append(tuple(row))
     file.close()
-    #return list of tuples of data
+    #return list of tuples of data (integers)
     return data
 
 def listToDictionary(aList):
@@ -37,5 +37,3 @@ def listToDictionary(aList):
         retDict[tupleRow[0]] = tupleRow[1:]
 
     return retDict
-
-print(listToDictionary(readCSVFile("game/codes/fileSystem/thisFile.csv")))
