@@ -1,16 +1,5 @@
 import csv
 
-def readStatsTuple(id):
-    #returns tuple
-    pass
-
-def readAiTuple(id):
-    #returns tuple
-    pass
-
-def importFromFile(filename):
-    #returns list
-    pass
 
 def readCSVFile(filename):
     #returns tuple (header, data)
