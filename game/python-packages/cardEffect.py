@@ -2,9 +2,9 @@
 a function that calls the effects of the cards
 """
 
-from Classes import Boss
+from classes import Boss
 from random import randint
-from Classes import Player
+from classes import Player
 
 #declaring local boss object, delete
 CurrentBoss = "Jorge"
