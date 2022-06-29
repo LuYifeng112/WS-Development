@@ -51,8 +51,8 @@ class Entity():
         self.__maxVitality = int(statsTuple[1])
         self.__maxEnergy = int(statsTuple[2])
         self.__currentSpirit = 0
-        self.__currentVitality = self.__vitality
-        self.__currentEnergy = self.__energy
+        self.__currentVitality = self.__maxVitality
+        self.__currentEnergy = self.__maxEnergy
 
     @property
     def name(self):
@@ -106,7 +106,7 @@ class Card():
         self.__description = str(description)
         self.__image = image
         self.__name = str(name)
-        self.__type = str(dmgType)
+        self.__dmgType = str(dmgType)
 
     @property
     def cost(self):
@@ -170,7 +170,7 @@ class Boss(Entity):
 
 class Player(Entity):
     def __init__(self, name, statsTuple):
-        super().init(name, statsTuple)
+        super().__init__(name, statsTuple)
         self.__money = 0
         self.__inventory = []
         self.__deck = []
@@ -193,7 +193,7 @@ class Player(Entity):
     
     def updateInventory(self, item, flag):
         if flag:
-            self.__inventory.append(item) #addes item when flag = true, else removes it
+            self.__inventory.append(item) #adds item when flag = true, else removes it
         else:
             self.__inventory.pop(self.__inventory.index(item))
     
@@ -225,25 +225,25 @@ class Item():
         return self.__icon
 
 
-class Shop():
-    def __init__(self):
-        self.__shop = []
-        self.__lines = ["You're poor", "GeorgiePi: Imagine being poor", "Sell your kidney :D", "Yar har you need a job", "Touch some grass"]
+# class Shop():
+#     def __init__(self):
+#         self.__shop = []
+#         self.__lines = ["You're poor", "GeorgiePi: Imagine being poor", "Sell your kidney :D", "Yar har you need a job", "Touch some grass"]
     
-    @property
-    def shop(self):
-        return self.__shop
+#     @property
+#     def shop(self):
+#         return self.__shop
     
-    def playerBuyItem(self, item):
-        if playerInstance.money >= item.value:
-            self.removeItem(item)
-            playerInstance.updateInventory(item, True)
-            playerInstance.removeMoney(item.value)
-        else:
-            self.ReturnLine()
+#     def playerBuyItem(self, item):
+#         if playerInstance.money >= item.value:
+#             self.removeItem(item)
+#             playerInstance.updateInventory(item, True)
+#             playerInstance.removeMoney(item.value)
+#         else:
+#             self.returnLine()
     
-    def removeItem(self, item):
-        self.__shop.pop(self.__Shop.index(item))
+#     def removeItem(self, item):
+#         self.__shop.pop(self.__Shop.index(item))
     
-    def returnLine(self):
-        return self.__lines[randint(len(self.__lines) + 1)]
+#     def returnLine(self):
+#         return self.__lines[randint(len(self.__lines) + 1)]
