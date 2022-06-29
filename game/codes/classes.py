@@ -3,10 +3,11 @@ A file full of all the classes of the game,
 imports from file
 """
 
+
 from random import randint
 
-class CombatAi():
-    def __init__(self, AiTuple):
+class combatAi():
+    def __init__(self, aiTuple):
         '''
         Tendency to Attack
         Ability to restore fighting spirit
@@ -18,173 +19,231 @@ class CombatAi():
         scripted attack.
         Ability to accept a non-lethal outcome
         These drops will be an object from the Item() class. 
-        AiTuple is a Tuple linked to the ID of the enemy in a Dictionary
+     aiTuple is a Tuple linked to the ID of the enemy in a Dictionary
         '''
-        self.__Aggression = AiTuple[0]
-        self.__Defense = AiTuple[1]
-        self.__Parry = AiTuple[2]
-        self.__Coercion = AiTuple[3]
-        self.__Crit = AiTuple[4]
+        self.__aggression = aiTuple[0]
+        self.__defense = aiTuple[1]
+        self.__parry = aiTuple[2]
+        self.__coercion = aiTuple[3]
+        self.__crit = aiTuple[4]
     
-    def GetAggression(self):
-        return self.__Aggression
+    def getAggression(self):
+        return self.__aggression
     
-    def GetDefense(self):
-        return self.__Defense
+    def getDefense(self):
+        return self.__defense
     
-    def GetParry(self):
-        return self.__Parry
+    def getParry(self):
+        return self.__parry
     
-    def GetCoercion(self):
-        return self.__Coercion
+    def getCoercion(self):
+        return self.__coercion
     
-    def GetCrit(self):
-        return self.__Crit
+    def getCrit(self):
+        return self.__crit
 
 class Entity():
     #Creates base class for all entities, including bosses and players
-    def __init__(self, Name, StatsTuple):
-        #StatsTuple in format spirit, vitality, energy
-        self.__Name = Name
-        self.__Spirit = int(StatsTuple[0])
-        self.__Vitality = int(StatsTuple[1])
-        self.__Energy = int(StatsTuple[2])
-        self.__CurrentSpirit = 0
-        self.__CurrentVitality = self.__Vitality
-        self.__CurrentEnergy = self.__Energy
+    def __init__(self, name, statsTuple):
+        #statsTuple in format spirit, vitality, energy
+        self.__name = name
+        self.__maxSpirit = int(statsTuple[0])
+        self.__maxVitality = int(statsTuple[1])
+        self.__maxEnergy = int(statsTuple[2])
+        self.__currentSpirit = 0
+        self.__currentVitality = self.__vitality
+        self.__currentEnergy = self.__energy
 
-    def GetName(self):
-        return self.__Name
+    @property
+    def name(self):
+        return self.__name
 
     #return max stats
-    def GetSpirit(self):
-        return self.__Spirit
 
-    def GetVitality(self):
-        return self.__Vitality
+    @property
+    def maxSpirit(self):
+        return self.__maxSpirit
+
+    @property
+    def maxVitality(self):
+        return self.__maxVitality
     
-    def GetEnergy(self):
-        return self.__Energy
+    @property
+    def maxEnergy(self):
+        return self.__maxEnergy
 
     #return Current stats
-    def GetCurrentSpirit(self):
-        return self.__CurrentSpirit
-    
-    def GetCurrentVitality(self):
-        return self.__CurrentVitality
 
-    def GetCurrentEnergy(self):
-        return self.__CurrentEnergy
+    @property
+    def spirit(self):
+        return self.__currentSpirit
+    
+    @property
+    def vitality(self):
+        return self.__currentVitality
+
+    @property
+    def energy(self):
+        return self.__currentEnergy
 
     #Update current stats, never below 0
-    def UpdateSpirit(self, num):
-        self.__CurrentSpirit = max(self.__CurrentSpirit + num, 0)
+    def updateSpirit(self, num):
+        self.__currentSpirit = min(self.__maxSpirit, max(self.__currentSpirit + num, 0)) #spirit goes up, but does not exceed max nor below 0
 
-    def UpdateVitality(self, num):
-        self.__CurrentVitality = max(self.__CurrentVitality + num, 0)
+    def updateVitality(self, num):
+        self.__currentVitality = min(self.__maxVitality, max(self.__currentVitality + num, 0)) #vitality changes, but does not exceed max nor below 0
 
-    def UpdateEnergy(self, num):
-        self.__CurrentEnergy = max(self.__CurrentEnergy + num, 0)
+    def updateEnergy(self, num):
+        self.__currentEnergy = min(self.__maxEnergy, max(self.__currentEnergy + num, 0)) #energy changes, but does no exceed max nor 0
         
         
 class Card():
-    def __init__(self, Name, Type, Cost, VitalityDmg, SpiritDmg, Image, Description, Effect = None):
-        self.__Cost = int(Cost)
-        self.__VitalityDmg = int(VitalityDmg)
-        self.__SpiritDmg = int(SpiritDmg)
-        self.__Effect = str(Effect)
-        self.__Description = str(Description)
-        self.__Image = Image
-        self.__Name = str(Name)
-        self.__Type = str(Type)
+    def __init__(self, name, dmgType, cost, vitalityDmg, spiritDmg, image, description, effect = None):
+        self.__cost = int(cost)
+        self.__vitalityDmg = int(vitalityDmg)
+        self.__spiritDmg = int(spiritDmg)
+        self.__effect = str(effect)
+        self.__description = str(description)
+        self.__image = image
+        self.__name = str(name)
+        self.__type = str(dmgType)
 
-    def GetCost(self):
-        return self.__Cost
+    @property
+    def cost(self):
+        return self.__cost
     
-    def GetCostStr(self):
-        return str(self.__Cost)
+    @property
+    def costStr(self):
+        return str(self.__cost)
 
-    def GetVitalityDmg(self):
-        return self.__VitalityDmg
+    @property
+    def vitalityDmg(self):
+        return self.__vitalityDmg
     
-    def GetVitalityDmgStr(self):
-        return str(self.__VitalityDmg)
+    @property
+    def vitalityDmgStr(self):
+        return str(self.__vitalityDmg)
     
-    def GetSpiritDmg(self):
-        return self.__SpiritDmg
+    @property
+    def spiritDmg(self):
+        return self.__spiritDmg
     
-    def GetSpiritDmgStr(self):
-        return str(self.__SpiritDmg)
+    @property
+    def spiritDmgStr(self):
+        return str(self.__spiritDmg)
 
-    def GetEffect(self):
-        return self.__Effect
+    @property
+    def effect(self):
+        return self.__effect
 
-    def GetDescription(self):
-        return self.__Description
+    @property
+    def description(self):
+        return self.__description
 
-    def GetImage(self):
-        return self.__Image
+    @property
+    def image(self):
+        return self.__image
 
-    def GetName(self):
-        return self.__Name
-        
-    def GetType(self):
-        return self.__Type
+    @property
+    def name(self):
+        return self.__name
+    
+    @property    
+    def dmgType(self):
+        return self.__dmgType
     
     def __repr__(self):
-        return "{}, {}, {}, {}, {}, {}, {}, {}, \n\n".format(self.__Name, self.__Type, self.__Cost, self.__VitalityDmg, self.__SpiritDmg, self.__Image, self.__Description, self.__Effect)
+        return "{}, {}, {}, {}, {}, {}, {}, {}, \n\n".format(self.__name, self.__dmgType, self.__cost, self.__vitalityDmg, self.__spiritDmg, self.__image, self.__description, self.__effect)
     
     def __str__(self):
-        return "{}, {}, {}, {}, {}, {}, {}, {}, \n\n".format(self.__Name, self.__Type, self.__Cost, self.__VitalityDmg, self.__SpiritDmg, self.__Image, self.__Description, self.__Effect)
+        return "{}, {}, {}, {}, {}, {}, {}, {}, \n\n".format(self.__name, self.__dmgType, self.__cost, self.__vitalityDmg, self.__spiritDmg, self.__image, self.__description, self.__effect)
 
 
 class Boss(Entity):
-    def __init__(self, Name, StatsTuple, Ai):
-        super().__init__(Name, StatsTuple)
-        self.__Ai = Ai #object
+    def __init__(self, name, statsTuple, ai):
+        super().__init__(name, statsTuple)
+        self.__ai = ai #object
 
-    def GetAi(self):
-        return self.__Ai
+    @property
+    def ai(self):
+        return self.__ai
+
+class Player(Entity):
+    def __init__(self, name, statsTuple):
+        super().init(name, statsTuple)
+        self.__money = 0
+        self.__inventory = []
+        self.__deck = []
+        self.__sin = 0
+    
+    @property
+    def money(self):
+        return self.__money
+    
+    @property
+    def deck(self):
+        return self.__deck
+    
+    @property
+    def sin(self):
+        return self.__sin
+    
+    def updateMoney(self, num):
+        self.__money = max(self.__money + num, 0) #update money, but not below 0
+    
+    def updateInventory(self, item, flag):
+        if flag:
+            self.__inventory.append(item) #addes item when flag = true, else removes it
+        else:
+            self.__inventory.pop(self.__inventory.index(item))
+    
+    def updateSin(self, num):
+        self.__sin = max(self.__sin + num, 0)
 
 
 class Item():
-    def __init__(self, Name, Desc, Value, Icon = None):
-        self.__Name = Name
-        self.__Desc = Desc
-        self.__Value = Value
-        self.__Icon = Icon
+    def __init__(self, name, desc, value, icon = None):
+        self.__name = name
+        self.__desc = desc
+        self.__value = value
+        self.__icon = icon
     
-    def GetName(self):
-        return self.__Name
+    @property
+    def name(self):
+        return self.__name
     
-    def GetDesc(self):
-        return self.__Desc
+    @property
+    def desc(self):
+        return self.__desc
     
-    def GetValue(self):
-        return self.__Value
+    @property
+    def value(self):
+        return self.__value
     
-    def GetIcon(self):
-        return self.__Icon
+    @property
+    def icon(self):
+        return self.__icon
 
 
 class Shop():
     def __init__(self):
-        self.__Shop = []
-        self.__Lines = ["You're poor", "GeorgiePi: Imagine being poor", "Sell your kidney :D", "Yar har you need a job", "Touch some grass"]
+        self.__shop = []
+        self.__lines = ["You're poor", "GeorgiePi: Imagine being poor", "Sell your kidney :D", "Yar har you need a job", "Touch some grass"]
     
-    def GetShop(self):
-        return self.__Shop
+    @property
+    def shop(self):
+        return self.__shop
     
-    def PlayerBuyItem(self, Item):
-        if PlayerInstance.GetMoney() >= Item.GetValue():
-            self.RemoveItem(Item)
-            PlayerInstance.AddToInventory(Item)
-            PlayerInstance.RemoveMoney(Item.GetValue())
+    def playerBuyItem(self, item):
+        if playerInstance.money >= item.value:
+            self.removeItem(item)
+            playerInstance.updateInventory(item, True)
+            playerInstance.removeMoney(item.value)
         else:
             self.ReturnLine()
     
-    def RemoveItem(self, Item):
-        self.__Shop.pop(self.__Shop.index(Item))
+    def removeItem(self, item):
+        self.__shop.pop(self.__Shop.index(item))
     
-    def ReturnLine(self):
-        return self.__Lines[randint(len(self.__Lines) + 1)]
+    def returnLine(self):
+        return self.__lines[randint(len(self.__lines) + 1)]
