@@ -1,0 +1,538 @@
+﻿--- Mon Jul  4 19:50:03 2022
+
+The Boss Goes First
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 19:50:29 2022
+
+--- Mon Jul  4 19:50:58 2022
+
+You Go First!
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 19:51:25 2022
+
+--- Mon Jul  4 19:52:34 2022
+
+The Boss Goes First
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+--- Mon Jul  4 19:52:58 2022
+
+The Boss Goes First
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 19:53:09 2022
+
+--- Mon Jul  4 19:56:11 2022
+
+You Go First!
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 19:56:25 2022
+
+--- Mon Jul  4 19:57:35 2022
+
+You Go First!
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 19:57:51 2022
+
+Git Gud
+
+--- Mon Jul  4 19:57:52 2022
+
+You Go First!
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 19:58:07 2022
+
+--- Mon Jul  4 19:58:32 2022
+
+The Boss Goes First
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 19:58:44 2022
+
+--- Mon Jul  4 20:00:26 2022
+
+You Go First!
+
+Player Strike
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 20:00:41 2022
+
+--- Mon Jul  4 20:01:09 2022
+
+You Go First!
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 20:01:15 2022
+
+--- Mon Jul  4 20:02:28 2022
+

@@ -2,7 +2,10 @@
 A file full of all the classes of the game,
 imports from file
 """
+import logging
 
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logging.warning('This will get logged to a file')
 
 from random import randint
 
@@ -175,6 +178,8 @@ class Player(Entity):
         self.__inventory = []
         self.__deck = []
         self.__sin = 0
+    
+        logging.info("Player Class Created")
     
     @property
     def money(self):

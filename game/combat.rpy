@@ -1,6 +1,9 @@
 ﻿init python:
     import classes as f
     player = f.Player("Fang", (10,10,10))
+    devlog.info("Player Created")
+    boss_miss = 0
+    boss_miss_continous = 0
 
 label combat_init:
     
@@ -30,20 +33,31 @@ label combat_boss:
     random:
         block:
             $ player.updateVitality(-3)
+            $ devlog.info("PLayer lost 3 vitality, now has "+str(player.vitality)+" vitality")
             "[player.vitality]"
-        block:
+            $ boss_miss_continous = 0
+        weight 0.5 block: #Need to find a way to make weights, dynamic, TODO: Parser fix
             "The Boss has missed the target."
+            $ boss_miss += 1
+            $ devlog.info("Boss has missed, total misses: "+str(boss_miss))
+            $ boss_miss_continous += 1
+            $ devlog.info("Boss has missed consecutively: "+str(boss_miss_continous)+" times.")
     #Check for Player Alive or Not
     #Will always run after the effect is done
     if player.vitality <= 0:
         jump combat_end_player_dead
+    
+    jump combat_player
 
 label combat_player:
     #Similar to label combat_boss but variable is boss not player.
     "Player Strike"
+
+    jump combat_boss
 
 
 label combat_end_player_dead:
     "You have Died"
     "Shinoobi Execution"
     "Git Gud"
+    $ devlog.critical("--Simulation Ended--")

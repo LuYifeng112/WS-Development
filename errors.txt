@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/combat.rpy", line 40: expected statement.
+    "The Boss has missed the target."]
+                                     ^
+
+Ren'Py Version: Ren'Py 8.0.0.22062402
+Mon Jul  4 19:55:48 2022

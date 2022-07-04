@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/combat.rpy", line 63, in script
+    $ devlog.crticial("--Simulation Ended--")
+  File "game/combat.rpy", line 63, in <module>
+    $ devlog.crticial("--Simulation Ended--")
+AttributeError: 'Logger' object has no attribute 'crticial'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/combat.rpy", line 63, in script
+    $ devlog.crticial("--Simulation Ended--")
+  File "D:\renpengine\renpy-7.4.10-sdk\renpy\ast.py", line 1111, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpengine\renpy-7.4.10-sdk\renpy\python.py", line 1049, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/combat.rpy", line 63, in <module>
+    $ devlog.crticial("--Simulation Ended--")
+AttributeError: 'Logger' object has no attribute 'crticial'
+
+Windows-10-10.0.19044 AMD64
+Ren'Py 8.0.0.22062402
+Wind and Spirit 1.0
+Mon Jul  4 19:57:41 2022
