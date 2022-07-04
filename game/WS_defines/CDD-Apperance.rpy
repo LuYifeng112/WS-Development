@@ -1,3 +1,11 @@
+'''
+This file hosts all the important plugins,
+
+Apppearing - A Graphical Class for changing opacity based on distance of mouse
+Random - A parser class for parsing statements from a list and choosing one randomly
+Block - A parser class for packaging multiple statements
+'''
+
 init python:
 
     import math
@@ -72,3 +80,72 @@ init python:
 
         def visit(self):
             return [ self.child ]
+
+
+python early:
+
+    def parse_random(l):
+
+        # Looks for a colon at the end of the line.
+        l.require(":")
+        l.expect_eol()
+
+        # This is a list of (weight, block) tuples.
+        blocks = [ ]
+
+        # ll is a lexer (an object that can match words, numbers, and other parts of text) that accesses the block under the current statement.
+        ll = l.subblock_lexer()
+
+        # For each line in the file, check for errors...
+        while ll.advance():
+            with ll.catch_error():
+
+                # ...determine the weight...
+                weight = 1.0
+
+                if ll.keyword('weight'):
+                    weight = float(ll.require(ll.float))
+
+                # ...and then store the weight and the statement.
+                blocks.append((weight, ll.renpy_statement()))
+
+        return { "blocks" : blocks }
+
+    def next_random(p):
+
+        blocks = p["blocks"]
+
+        # Pick a number between 0 and the total weight.
+        total_weight = sum(i[0] for i in blocks)
+        n = renpy.random.random() * total_weight
+
+        # Then determine which block that number belongs to.
+        for weight, block in blocks:
+            if n <= weight:
+                break
+            else:
+                n -= weight
+
+        return block
+
+    renpy.register_statement("random", parse=parse_random, next=next_random, predict_all=True, block=True)
+
+python early:
+
+    def parse_block(l):
+
+        # Looks for a colon and the end of line.
+        l.require(':')
+        l.expect_eol()
+
+        # Parses the block below this statement.
+        block = l.subblock_lexer().renpy_block()
+
+        return { "block" : block }
+
+    # The next function returns the statement to execute next - in this case,
+    # the first statement in the block.
+    def next_block(p):
+        return p["block"]
+
+    renpy.register_statement("block", parse=parse_block, next=next_block, predict_all=True, block=True)
