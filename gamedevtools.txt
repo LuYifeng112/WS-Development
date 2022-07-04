@@ -540,3 +540,37 @@ Git Gud
 
 --- Mon Jul  4 20:08:32 2022
 
+--- Mon Jul  4 20:19:19 2022
+
+The Boss Goes First
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Mon Jul  4 20:19:29 2022
+
