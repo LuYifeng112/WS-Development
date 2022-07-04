@@ -10,6 +10,6 @@ define e = Character("Eileen")
 
 label start:
 
-    jump combat_init
+    jump combat_init #see code in vscode://game/WS_defines/combat.rpy.rpy:87:4
 
     return

@@ -5,7 +5,10 @@
 label combat_init:
     
     # Anything to set up the combat will be established in this label
+
+    #Damage Control Variables
     $renpy.block_rollback() #will block going to previous dialogue or exiting out of the combat, useful against cheats and save control
+    $ _skipping = False #Need to also make sure players don't just cycle through combat labels and make it skip or softlock anything.
 
     jump combat_startup_probability
 
@@ -23,12 +26,24 @@ label combat_startup_probability:
 
 label combat_boss:
     "Boss Strike"
+    #Since a boss is AI, this will need to become dynamic, either that or we should prepare to hardcode all bosses
     random:
         block:
             $ player.updateVitality(-3)
             "[player.vitality]"
         block:
             "The Boss has missed the target."
+    #Check for Player Alive or Not
+    #Will always run after the effect is done
+    if player.vitality <= 0:
+        jump combat_end_player_dead
 
 label combat_player:
+    #Similar to label combat_boss but variable is boss not player.
     "Player Strike"
+
+
+label combat_end_player_dead:
+    "You have Died"
+    "Shinoobi Execution"
+    "Git Gud"
