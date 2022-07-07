@@ -574,3 +574,87 @@ Git Gud
 
 --- Mon Jul  4 20:19:29 2022
 
+--- Thu Jul  7 17:15:55 2022
+
+You Go First!
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+1
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Thu Jul  7 17:16:22 2022
+

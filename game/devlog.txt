@@ -1,3 +1,25 @@
 
 --- launch game ---
 
+2022-07-07 17:15:54,772 INFO Wind and Spirit 1.0 Player Created
+2022-07-07 17:16:03,157 INFO Wind and Spirit 1.0 Boss has missed, total misses: 1
+2022-07-07 17:16:03,157 INFO Wind and Spirit 1.0 Boss has missed consecutively: 1 times.
+2022-07-07 17:16:06,564 INFO Wind and Spirit 1.0 PLayer lost 3 vitality, now has 7 vitality
+2022-07-07 17:16:08,271 INFO Wind and Spirit 1.0 Boss has missed, total misses: 2
+2022-07-07 17:16:08,271 INFO Wind and Spirit 1.0 Boss has missed consecutively: 1 times.
+2022-07-07 17:16:09,409 INFO Wind and Spirit 1.0 Boss has missed, total misses: 3
+2022-07-07 17:16:09,409 INFO Wind and Spirit 1.0 Boss has missed consecutively: 2 times.
+2022-07-07 17:16:10,195 INFO Wind and Spirit 1.0 PLayer lost 3 vitality, now has 4 vitality
+2022-07-07 17:16:11,530 INFO Wind and Spirit 1.0 Boss has missed, total misses: 4
+2022-07-07 17:16:11,531 INFO Wind and Spirit 1.0 Boss has missed consecutively: 1 times.
+2022-07-07 17:16:12,499 INFO Wind and Spirit 1.0 Boss has missed, total misses: 5
+2022-07-07 17:16:12,500 INFO Wind and Spirit 1.0 Boss has missed consecutively: 2 times.
+2022-07-07 17:16:13,605 INFO Wind and Spirit 1.0 Boss has missed, total misses: 6
+2022-07-07 17:16:13,606 INFO Wind and Spirit 1.0 Boss has missed consecutively: 3 times.
+2022-07-07 17:16:15,543 INFO Wind and Spirit 1.0 Boss has missed, total misses: 7
+2022-07-07 17:16:15,543 INFO Wind and Spirit 1.0 Boss has missed consecutively: 4 times.
+2022-07-07 17:16:16,232 INFO Wind and Spirit 1.0 PLayer lost 3 vitality, now has 1 vitality
+2022-07-07 17:16:17,548 INFO Wind and Spirit 1.0 Boss has missed, total misses: 8
+2022-07-07 17:16:17,548 INFO Wind and Spirit 1.0 Boss has missed consecutively: 1 times.
+2022-07-07 17:16:18,287 INFO Wind and Spirit 1.0 PLayer lost 3 vitality, now has 0 vitality
+2022-07-07 17:16:22,429 CRITICAL Wind and Spirit 1.0 --Simulation Ended--
