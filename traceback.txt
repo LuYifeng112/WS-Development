@@ -1,26 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/combat.rpy", line 63, in script
-    $ devlog.crticial("--Simulation Ended--")
-  File "game/combat.rpy", line 63, in <module>
-    $ devlog.crticial("--Simulation Ended--")
-AttributeError: 'Logger' object has no attribute 'crticial'
+  File "game/WS_defines/WS_filereader.rpy", line 2, in script
+    init python:
+  File "game/WS_defines/WS_filereader.rpy", line 2, in script
+    init python:
+  File "game/WS_defines/WS_filereader.rpy", line 3, in <module>
+    import csv
+ImportError: No module named csv
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/combat.rpy", line 63, in script
-    $ devlog.crticial("--Simulation Ended--")
-  File "D:\renpengine\renpy-7.4.10-sdk\renpy\ast.py", line 1111, in execute
+  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk/renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk/renpy/main.py", line 550, in main
+    renpy.game.context().run(node)
+  File "game/WS_defines/WS_filereader.rpy", line 2, in script
+    init python:
+  File "game/WS_defines/WS_filereader.rpy", line 2, in script
+    init python:
+  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk/renpy/ast.py", line 928, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\renpengine\renpy-7.4.10-sdk\renpy\python.py", line 1049, in py_exec_bytecode
+  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk/renpy/python.py", line 2245, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/combat.rpy", line 63, in <module>
-    $ devlog.crticial("--Simulation Ended--")
-AttributeError: 'Logger' object has no attribute 'crticial'
+  File "game/WS_defines/WS_filereader.rpy", line 3, in <module>
+    import csv
+ImportError: No module named csv
 
-Windows-10-10.0.19044 AMD64
-Ren'Py 8.0.0.22062402
+Windows-10-10.0.22000
+Ren'Py 7.4.10.2178
 Wind and Spirit 1.0
-Mon Jul  4 19:57:41 2022
+Wed Jul  6 22:10:16 2022
