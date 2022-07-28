@@ -45,3 +45,11 @@ def EnoughEnergy(Value):
     if PlayerInstance.GetCurrentEnergy() >= Value:
         PlayerInstance.UseEnergy(Value)
         return True
+
+#Create the dictionary that stores the relevant functions for the effect
+#Need a system to call all possible card effect functions.
+
+#1. Try using dictionaries and lambdas
+
+cardEffect = {}
+
