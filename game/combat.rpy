@@ -52,6 +52,12 @@ label combat_boss:
 label combat_player:
     #Similar to label combat_boss but variable is boss not player.
     "Player Strike"
+    #PSEUDO_CODE
+    #   randomise hand
+    #   call screen hand_of_cards
+    #   Function effect of card
+    #   check boss health > 0
+    #   OR --> Jump Victory
 
     jump combat_boss
 
@@ -61,3 +67,13 @@ label combat_end_player_dead:
     "Shinoobi Execution"
     "Git Gud"
     $ devlog.critical("--Simulation Ended--")
+
+label combat_victory:
+    #Return player to relevant label
+    #   Utilize reference variable of labels
+    return
+
+
+#TODO
+# Function List for all card abilities
+# 
