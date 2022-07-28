@@ -1,14 +1,14 @@
-Thu Jul  7 17:15:53 2022
+Thu Jul 28 20:56:11 2022
 Windows-10-10.0.22000
 Ren'Py 8.0.0.22062402
  
 
 Bootstrap to the start of init.init took 0.09s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.19s
-Loading script took 0.61s
-Loading save slot metadata. took 0.01s
+Early init took 0.01s
+Loader init took 0.05s
+Loading error handling took 0.05s
+Loading script took 0.32s
+Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\liuge\\Desktop\\Renpy\\renpy-7.4.10-sdk.7z\\renpy-7.4.10-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
 CRITICAL Wind and Spirit 1.0 
@@ -17,31 +17,31 @@ CRITICAL Wind and Spirit 1.0
 WARNING  root            This will get logged to a file
 INFO     root            Player Class Created
 INFO     Wind and Spirit 1.0 Player Created
-Running init code took 0.10s
+Running init code took 0.12s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\liuge\\AppData\\Roaming/RenPy/backups\\WS-Development':
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.10s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.51s
+Creating interface object took 0.57s
 Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.00s
-Load screen analysis took 0.01s
+Load screen analysis took 0.00s
 Analyze screens took 0.02s
-Save screen analysis took 0.02s
-Prepare screens took 0.07s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.06s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.10s
+Interface start took 0.13s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -56,22 +56,8 @@ Maximum texture size: 4096x4096
 INFO     Wind and Spirit 1.0 Boss has missed, total misses: 1
 INFO     Wind and Spirit 1.0 Boss has missed consecutively: 1 times.
 INFO     Wind and Spirit 1.0 PLayer lost 3 vitality, now has 7 vitality
-INFO     Wind and Spirit 1.0 Boss has missed, total misses: 2
-INFO     Wind and Spirit 1.0 Boss has missed consecutively: 1 times.
-INFO     Wind and Spirit 1.0 Boss has missed, total misses: 3
-INFO     Wind and Spirit 1.0 Boss has missed consecutively: 2 times.
 INFO     Wind and Spirit 1.0 PLayer lost 3 vitality, now has 4 vitality
-INFO     Wind and Spirit 1.0 Boss has missed, total misses: 4
-INFO     Wind and Spirit 1.0 Boss has missed consecutively: 1 times.
-INFO     Wind and Spirit 1.0 Boss has missed, total misses: 5
-INFO     Wind and Spirit 1.0 Boss has missed consecutively: 2 times.
-INFO     Wind and Spirit 1.0 Boss has missed, total misses: 6
-INFO     Wind and Spirit 1.0 Boss has missed consecutively: 3 times.
-INFO     Wind and Spirit 1.0 Boss has missed, total misses: 7
-INFO     Wind and Spirit 1.0 Boss has missed consecutively: 4 times.
 INFO     Wind and Spirit 1.0 PLayer lost 3 vitality, now has 1 vitality
-INFO     Wind and Spirit 1.0 Boss has missed, total misses: 8
-INFO     Wind and Spirit 1.0 Boss has missed consecutively: 1 times.
 INFO     Wind and Spirit 1.0 PLayer lost 3 vitality, now has 0 vitality
 CRITICAL Wind and Spirit 1.0 --Simulation Ended--
 Cleaning stores took 0.00s

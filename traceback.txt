@@ -1,34 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/WS_defines/WS_filereader.rpy", line 2, in script
-    init python:
-  File "game/WS_defines/WS_filereader.rpy", line 2, in script
-    init python:
-  File "game/WS_defines/WS_filereader.rpy", line 3, in <module>
-    import csv
-ImportError: No module named csv
+  File "game/script.rpy", line 12, in script
+    $ renpy.say(e, test)
+  File "game/script.rpy", line 12, in <module>
+    $ renpy.say(e, test)
+TypeError: unsupported operand type(s) for %: 'function' and 'TagQuotingDict'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk/renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk/renpy/main.py", line 550, in main
-    renpy.game.context().run(node)
-  File "game/WS_defines/WS_filereader.rpy", line 2, in script
-    init python:
-  File "game/WS_defines/WS_filereader.rpy", line 2, in script
-    init python:
-  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk/renpy/ast.py", line 928, in execute
+  File "game/script.rpy", line 12, in script
+    $ renpy.say(e, test)
+  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk\renpy\ast.py", line 1111, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk\renpy\python.py", line 1049, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/WS_defines/WS_filereader.rpy", line 3, in <module>
-    import csv
-ImportError: No module named csv
+  File "game/script.rpy", line 12, in <module>
+    $ renpy.say(e, test)
+  File "C:\Users\liuge\Desktop\Renpy\renpy-7.4.10-sdk.7z\renpy-7.4.10-sdk\renpy\exports.py", line 1362, in say
+    what = what % tag_quoting_dict
+TypeError: unsupported operand type(s) for %: 'function' and 'TagQuotingDict'
 
-Windows-10-10.0.22000
-Ren'Py 7.4.10.2178
+Windows-10-10.0.22000 AMD64
+Ren'Py 8.0.0.22062402
 Wind and Spirit 1.0
-Thu Jul  7 17:11:21 2022
+Thu Jul 28 20:50:49 2022

@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/combat.rpy", line 40: expected statement.
-    "The Boss has missed the target."]
-                                     ^
+File "game/WS_defines/card_dictionary.rpy", line 8: invalid syntax
+    $ renpy.say(card_effect_dict[1])
+     ^
+    
 
 Ren'Py Version: Ren'Py 8.0.0.22062402
-Mon Jul  4 19:55:48 2022
+Thu Jul 28 20:45:07 2022

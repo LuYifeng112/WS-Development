@@ -31,5 +31,7 @@ init python:
     this_Dictionary = listToDictionary(readCSVFile("csv/thisFile.csv"))
     ai_Dictionary = listToDictionary(readCSVFile("csv/ai.csv"))
     stat_Dictionary = listToDictionary(readCSVFile("csv/stat.csv"))
+    #effect_Dictionary is in format id: (tuple of all function id's)
+    effect_Dictionary = listToDictionary(readCSVFile("csv/effect.csv")) 
     
 

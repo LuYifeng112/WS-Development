@@ -658,3 +658,73 @@ Git Gud
 
 --- Thu Jul  7 17:16:22 2022
 
+--- Thu Jul 28 20:48:01 2022
+
+--- Thu Jul 28 20:48:37 2022
+
+--- Thu Jul 28 20:50:46 2022
+
+--- Thu Jul 28 20:51:24 2022
+
+--- Thu Jul 28 20:51:34 2022
+
+--- Thu Jul 28 20:53:41 2022
+
+Eileen
+<function draw_one at 0x00000000055e0670>
+
+Eileen
+1
+
+The Boss Goes First
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+--- Thu Jul 28 20:56:12 2022
+
+Eileen
+I drew one
+
+Eileen
+2
+
+You Go First!
+
+Player Strike
+
+Boss Strike
+
+The Boss has missed the target.
+
+Player Strike
+
+Boss Strike
+
+7
+
+Player Strike
+
+Boss Strike
+
+4
+
+Player Strike
+
+Boss Strike
+
+Boss Strike
+
+0
+
+You have Died
+
+Shinoobi Execution
+
+Git Gud
+
+--- Thu Jul 28 20:56:32 2022
+
