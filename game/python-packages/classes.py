@@ -9,6 +9,15 @@ logging.warning('This will get logged to a file')
 
 from random import randint
 
+#     ___       ____       __  __       ___         _       ____          _        __  
+#   ,"___".    F __ ]     F  \/  ]     F _ ",      /.\     /_  _\        /.\       FJ  
+#   FJ---L]   J |--| L   J |\__/| L   J `-'(|     //_\\    [J  L]       //_\\     J  L 
+#  J |   LJ   | |  | |   | |`--'| |   | ,--.\    / ___ \    |  |       / ___ \    |  | 
+#  | \___--.  F L__J J   F L    J J   F L__J \  / L___J \   F  J      / L___J \   F  J 
+#  J\_____/F J\______/F J__L    J__L J_______J J__L   J__L J____L    J__L   J__L J____L
+#   J_____F   J______F  |__L    J__| |_______F |__L   J__| |____|    |__L   J__| |____|
+
+                  
 class combatAi():
     def __init__(self, aiTuple):
         '''
@@ -27,23 +36,30 @@ class combatAi():
         self.__aggression = aiTuple[0]
         self.__defense = aiTuple[1]
         self.__parry = aiTuple[2]
-        self.__coercion = aiTuple[3]
-        self.__crit = aiTuple[4]
+        self.__crit = aiTuple[3]
+        self.__coercion = aiTuple[4]
     
-    def getAggression(self):
+    @property
+    def aggression(self): # All stats are suppose to add up to 1, except for coercion
         return self.__aggression
     
-    def getDefense(self):
+    @property
+    def defense(self):
         return self.__defense
     
-    def getParry(self):
+    @property
+    def parry(self):
         return self.__parry
     
-    def getCoercion(self):
+    @property
+    def crit(self):
+        return self.__crit
+    
+    @property()
+    def coercion(self): # A separate stats from the others
         return self.__coercion
     
-    def getCrit(self):
-        return self.__crit
+    
 
 class Entity():
     #Creates base class for all entities, including bosses and players
@@ -252,3 +268,18 @@ class Item():
     
 #     def returnLine(self):
 #         return self.__lines[randint(len(self.__lines) + 1)]
+
+def weightedChoice(choices): # To replace the use of weights in renpy blocks
+        """ 
+        @param choices: A list of (choice, weight) tuples. Returns a random
+        choice (using renpy.random as the random number generator)
+        """
+        totalweight = 0.0
+        for choice, weight in choices:
+            totalweight += weight
+        randval = renpy.random.random() * totalweight
+        for choice, weight in choices:
+            if randval <= weight:
+                return choice
+            else:
+                randval -= weight
